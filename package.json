@@ -1,0 +1,28 @@
+{
+  "name": "luderi-technologies-website",
+  "version": "1.0.0",
+  "description": "Modern website for Luderi Technologies",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -p 3000 -s .",
+    "dev": "serve -p 3000 -s .",
+    "build": "echo 'Build complete'",
+    "serve": "serve -p 3000 -s .",
+    "setup": "npm install && npm start"
+  },
+  "keywords": [
+    "website",
+    "luderi",
+    "technologies",
+    "responsive",
+    "modern"
+  ],
+  "author": "Luderi Technologies",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Contact - LUDERI Technologies</title>
+    <link rel="stylesheet" href="styles.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="Public/Logo.png" alt="Luderi Logo" class="logo-image">
+                <div class="logo-text">
+                    <span class="luderi-text">LUDERI</span>
+                    <span class="technologies-text">Technologies</span>
+                </div>
+            </div>
+            
+            <div class="nav-center">
+                <div class="nav-box">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="product.html" class="nav-link">Our Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="privacy.html" class="nav-link">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link active">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="contact.html" class="btn-get-started">Get Started</a>
+                <button class="btn-login">Log in</button>
+            </div>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Contact Us</h1>
+                <p class="hero-subtitle">Get in touch with us to learn more about how Luderi can transform your practice.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <!-- Light Effects -->
+        <div class="light-effect"></div>
+        <div class="light-effect light-effect-2"></div>
+        <div class="light-effect light-effect-3"></div>
+        <div class="light-effect light-effect-4"></div>
+        <div class="light-effect light-effect-5"></div>
+        <div class="light-effect light-effect-6"></div>
+        <div class="container">
+            <div class="contact-form-container">
+                <form class="contact-form-large">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Company / Clinic Name</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interest">Primary Interest</label>
+                        <select id="interest" name="interest">
+                            <option value="">Select your primary interest</option>
+                            <option value="demo">Schedule a demo</option>
+                            <option value="pricing">Pricing information</option>
+                            <option value="integration">Integration questions</option>
+                            <option value="technical">Technical support</option>
+                            <option value="partnership">Partnership opportunities</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="8" placeholder="Tell us about your needs and how Luderi can help transform your practice..." required></textarea>
+                    </div>
+                    
+
+                    
+                    <button type="submit" class="submit-btn-large">
+                        <span>Send Message</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </form>
+                
+                <!-- Success Message -->
+                <div id="success-message" class="success-message">
+                    <div class="success-content">
+                        <div class="success-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                        <button id="close-success" class="close-success-btn">Close</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Contact@luderitechnologies.com</p>
+                    <p>We respond within 24 hours</p>
+                </div>
+                
+                <div class="contact-info-card">
+                    <a href="https://www.linkedin.com/company/luderi-technologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="12" fill="#1e3a8a"/>
+                                <text x="12" y="16" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">in</text>
+                            </svg>
+                        </div>
+                        <h3>Connect on LinkedIn</h3>
+                        <p>Follow us for industry updates</p>
+                        <p>and company news</p>
+                    </a>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                    </div>
+                    <h3>Response Time</h3>
+                    <p>We aim to respond to all</p>
+                    <p>inquiries within 24 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="footer-logo-section">
+                    <img src="Public/Logo.png" alt="Luderi Logo" class="footer-logo-image">
+                    <div class="footer-logo-text">
+                        <span class="footer-luderi-text">LUDERI</span>
+                        <span class="footer-technologies-text">Technologies</span>
+                    </div>
+                </div>
+                <p class="footer-quote">The new AI-based software to revolutionize your P&O clinic</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="product.html" class="footer-link">Our Product</a>
+                <a href="about.html" class="footer-link">About</a>
+                <a href="privacy.html" class="footer-link">Privacy</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h3 class="contact-headline">Contact</h3>
+                <div class="contact-info">
+                    <div class="linkedin-section">
+                        <a href="https://www.linkedin.com/company/luderi-technologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+                            <svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <a href="mailto:Contact@luderitechnologies.com" class="contact-email">Contact@luderitechnologies.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
