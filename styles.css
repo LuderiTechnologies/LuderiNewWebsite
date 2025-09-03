@@ -3914,3 +3914,156 @@ html {
         gap: 30px;
     }
 }
+
+/* Terms and Conditions Page Styles */
+.terms-section {
+    padding: 120px 0 80px 0;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+.terms-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.terms-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.terms-effective-date {
+    font-size: 1rem;
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.terms-intro h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 20px;
+}
+
+.terms-intro p {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.terms-sections {
+    margin-top: 40px;
+}
+
+.terms-section-item {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.terms-section-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.terms-section-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.terms-section-item p {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.terms-section-item p:last-child {
+    margin-bottom: 0;
+}
+
+.terms-section-item ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.terms-section-item li {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.terms-section-item a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.terms-section-item a:hover {
+    color: #1e40af;
+    text-decoration: underline;
+}
+
+.contact-details {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.contact-details p {
+    margin-bottom: 5px;
+}
+
+.registered-agent {
+    background: #f1f5f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.registered-agent h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.registered-agent p {
+    margin-bottom: 5px;
+}
+
+/* Responsive Design for Terms Page */
+@media (max-width: 768px) {
+    .terms-section {
+        padding: 100px 20px 60px 20px;
+    }
+    
+    .terms-content {
+        padding: 40px 30px;
+        margin: 0;
+    }
+    
+    .terms-title {
+        font-size: 2rem;
+    }
+    
+    .terms-intro h2 {
+        font-size: 1.5rem;
+    }
+}
