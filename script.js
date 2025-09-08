@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             e.stopPropagation();
             console.log('Login button clicked, opening demo in new window...');
-            alert('Login button clicked! Opening demo in new window...');
             window.open('https://demo.luderitechnologies.com/auth', '_blank');
         });
         
@@ -184,7 +183,6 @@ function handleLoginClick(e) {
     e.preventDefault();
     e.stopPropagation();
     console.log('Login button clicked (backup handler), opening demo in new window...');
-    alert('Login button clicked! Opening demo in new window...');
     window.open('https://demo.luderitechnologies.com/auth', '_blank');
 }
 

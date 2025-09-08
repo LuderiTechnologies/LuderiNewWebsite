@@ -926,7 +926,10 @@ html {
     justify-content: center;
 }
 
-.icon-item:nth-child(2) .icon-headline,
+.icon-item:nth-child(2) .icon-headline {
+    color: #475569 !important;
+}
+
 .icon-item:nth-child(3) .icon-headline {
     color: white;
 }
@@ -948,7 +951,10 @@ html {
     text-align: center;
 }
 
-.icon-item:nth-child(2) .icon-label,
+.icon-item:nth-child(2) .icon-label {
+    color: #475569 !important;
+}
+
 .icon-item:nth-child(3) .icon-label {
     color: rgba(255, 255, 255, 0.9);
 }
@@ -974,7 +980,10 @@ html {
     justify-content: center;
 }
 
-.icon-item:nth-child(2) .icon-description,
+.icon-item:nth-child(2) .icon-description {
+    color: #6b7280 !important;
+}
+
 .icon-item:nth-child(3) .icon-description {
     color: rgba(255, 255, 255, 0.8);
 }
