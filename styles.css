@@ -126,6 +126,102 @@ body {
     width: 100%;
 }
 
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-30%) translateY(16px);
+    background: #e5e7eb;
+    border-radius: 12px;
+    padding: 0;
+    margin-top: 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: none;
+}
+
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: 0;
+    right: 0;
+    height: 16px;
+    background: transparent;
+    pointer-events: auto;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-30%) translateY(16px);
+}
+
+.dropdown-menu {
+    pointer-events: auto;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 12px 20px;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+    pointer-events: auto;
+    letter-spacing: 0.01em;
+    background: #f8fafc;
+    white-space: nowrap;
+}
+
+.dropdown-link:hover {
+    background: #e5e7eb;
+    color: #1f2937;
+    transform: translateX(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 0 2px 2px 0;
+    transition: height 0.2s ease;
+}
+
+.dropdown-link:hover::before {
+    height: 20px;
+}
+
+
 /* Navigation Buttons */
 .nav-buttons {
     display: flex;

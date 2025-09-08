@@ -128,6 +128,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
         observer.observe(revolutionSection);
     }
+    
+    // Dropdown menu functionality with hover delay
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        let hoverTimeout;
+        
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(hoverTimeout);
+        });
+        
+        dropdown.addEventListener('mouseleave', () => {
+            hoverTimeout = setTimeout(() => {
+                // Small delay to allow moving to dropdown menu
+            }, 100);
+        });
+        
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        if (dropdownMenu) {
+            dropdownMenu.addEventListener('mouseenter', () => {
+                clearTimeout(hoverTimeout);
+            });
+            
+            dropdownMenu.addEventListener('mouseleave', () => {
+                hoverTimeout = setTimeout(() => {
+                    // Small delay when leaving dropdown menu
+                }, 100);
+            });
+        }
+    });
+    
+    // Ensure dropdown links are clickable
+    const dropdownLinks = document.querySelectorAll('.dropdown-link');
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Allow normal link behavior
+            console.log('Dropdown link clicked:', link.href);
+        });
+    });
 });
 
 // Backup login button handler (in case DOMContentLoaded doesn't work)
