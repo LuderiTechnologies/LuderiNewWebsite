@@ -44,11 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         newHeadline.classList.add('animate');
                     }
                     
-                    // Animate icon items with staggered delays
-                    iconItems.forEach((item, index) => {
-                        setTimeout(() => {
-                            item.classList.add('animate');
-                        }, 300 + (index * 200)); // 300ms delay for headline, then 200ms between each box
+                    // Animate icon items immediately
+                    iconItems.forEach((item) => {
+                        item.classList.add('animate');
                     });
                     
                     // Unobserve after animation to prevent re-triggering
@@ -56,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            threshold: 0.3 // Trigger when 30% of the section is visible
+            threshold: 0.05 // Trigger when 5% of the section is visible
         });
 
         observer.observe(newHeadlineSection);
