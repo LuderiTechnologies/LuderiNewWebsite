@@ -1738,6 +1738,13 @@ html {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.viktor-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 .viktor-quote {
