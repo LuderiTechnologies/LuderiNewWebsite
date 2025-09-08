@@ -390,10 +390,9 @@
                 <p class="contact-subtitle">Do you want to learn more about our product please contact us</p>
                 
                 <div class="contact-form-container">
-                    <form class="contact-form" action="https://formspree.io/f/xjkwzqll" method="POST">
+                    <form class="contact-form" id="contact-form-product">
                         <input type="hidden" name="_to" value="contact@luderitechnologies.com">
                         <input type="hidden" name="_subject" value="New Contact Form Submission from Luderi Website - Product Page">
-                        <input type="hidden" name="_next" value="https://luderitechnologies.com/product.html?success=true">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Name *</label>
@@ -419,6 +418,21 @@
                             </svg>
                         </button>
                     </form>
+                </div>
+                
+                <!-- Success Message -->
+                <div id="success-message" class="success-message">
+                    <div class="success-content">
+                        <div class="success-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                        <button id="close-success" class="close-success-btn">Close</button>
+                    </div>
                 </div>
             </div>
         </div>

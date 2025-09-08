@@ -307,20 +307,64 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScrollAnimations();
     handleWhatLeadAnimations();
     
-    // Contact Form Success Message - Now handled by Formspree redirect
+    // Contact Form Handling with AJAX
+    const contactForms = document.querySelectorAll('form[id^="contact-form"]');
     const successMessage = document.getElementById('success-message');
     const closeSuccessBtn = document.getElementById('close-success');
 
-    // Check if we're on the success page (Formspree redirect)
-    if (window.location.search.includes('success=true')) {
-        if (successMessage) {
-            successMessage.classList.add('show');
-        }
-    }
+    // Handle all contact forms
+    contactForms.forEach(form => {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<span>Sending...</span>';
+            submitBtn.disabled = true;
+            
+            try {
+                // Create FormData
+                const formData = new FormData(form);
+                
+                // Submit to Formspree
+                const response = await fetch('https://formspree.io/f/xjkwzqll', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success message
+                    if (successMessage) {
+                        successMessage.classList.add('show');
+                    }
+                    
+                    // Reset form
+                    form.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Sorry, there was an error sending your message. Please try again.');
+            } finally {
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    });
 
+    // Success message handling
     if (closeSuccessBtn) {
         closeSuccessBtn.addEventListener('click', function() {
-            successMessage.classList.remove('show');
+            if (successMessage) {
+                successMessage.classList.remove('show');
+            }
         });
     }
 
