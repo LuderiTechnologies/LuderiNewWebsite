@@ -307,21 +307,15 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScrollAnimations();
     handleWhatLeadAnimations();
     
-    // Contact Form Success Message
-    const contactForm = document.querySelector('.contact-form-large');
+    // Contact Form Success Message - Now handled by Formspree redirect
     const successMessage = document.getElementById('success-message');
     const closeSuccessBtn = document.getElementById('close-success');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show success message
+    // Check if we're on the success page (Formspree redirect)
+    if (window.location.search.includes('success=true')) {
+        if (successMessage) {
             successMessage.classList.add('show');
-            
-            // Reset form
-            contactForm.reset();
-        });
+        }
     }
 
     if (closeSuccessBtn) {
