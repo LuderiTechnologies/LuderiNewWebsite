@@ -8,6 +8,7 @@
     "dev": "serve -p 3000 -s .",
     "build": "echo 'Build complete'",
     "serve": "serve -p 3000 -s .",
+    "http-server": "npx http-server -p 3000 -o",
     "setup": "npm install && npm start"
   },
   "keywords": [

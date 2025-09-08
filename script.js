@@ -17,6 +17,33 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
 // Initialize page
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Login button routing
+    const loginButtons = document.querySelectorAll('.btn-login');
+    console.log('Found login buttons:', loginButtons.length);
+    
+    if (loginButtons.length === 0) {
+        console.error('No login buttons found! Check HTML structure.');
+        // Try alternative selectors
+        const altButtons = document.querySelectorAll('button[class*="login"], .nav-buttons button');
+        console.log('Alternative buttons found:', altButtons.length);
+    }
+    
+    loginButtons.forEach((button, index) => {
+        console.log(`Adding click listener to button ${index + 1}:`, button);
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Login button clicked, opening demo in new window...');
+            alert('Login button clicked! Opening demo in new window...');
+            window.open('https://demo.luderitechnologies.com/auth', '_blank');
+        });
+        
+        // Add visual feedback
+        button.style.cursor = 'pointer';
+        button.addEventListener('mouseenter', () => {
+            console.log('Mouse over login button');
+        });
+    });
     
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
@@ -102,6 +129,26 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(revolutionSection);
     }
 });
+
+// Backup login button handler (in case DOMContentLoaded doesn't work)
+window.addEventListener('load', () => {
+    const loginButtons = document.querySelectorAll('.btn-login');
+    console.log('Backup handler - Found login buttons:', loginButtons.length);
+    
+    loginButtons.forEach((button, index) => {
+        // Remove any existing listeners to avoid duplicates
+        button.removeEventListener('click', handleLoginClick);
+        button.addEventListener('click', handleLoginClick);
+    });
+});
+
+function handleLoginClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Login button clicked (backup handler), opening demo in new window...');
+    alert('Login button clicked! Opening demo in new window...');
+    window.open('https://demo.luderitechnologies.com/auth', '_blank');
+}
 
 // Expandable sections functionality
 function toggleSection(sectionNumber) {
