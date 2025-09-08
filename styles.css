@@ -555,18 +555,23 @@ body {
     }
 
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.8rem;
         margin-top: 1.5rem;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
     }
 
     .hero-description {
         font-size: 1.1rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+        max-width: 100%;
     }
 
     .hero-cta-button {
-        padding: 14px 28px;
-        font-size: 1rem;
+        padding: 16px 32px;
+        font-size: 1.1rem;
+        min-height: 48px;
     }
 
     .light-effect {
@@ -596,18 +601,22 @@ body {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         margin-top: 1rem;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
     }
 
     .hero-description {
         font-size: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
     }
 
     .hero-cta-button {
-        padding: 12px 24px;
-        font-size: 0.9rem;
+        padding: 14px 28px;
+        font-size: 1rem;
+        min-height: 44px;
     }
 
     .light-effect {
@@ -4217,5 +4226,71 @@ html {
     
     .terms-intro h2 {
         font-size: 1.5rem;
+    }
+}
+
+/* Enhanced Mobile Experience */
+@media (max-width: 768px) {
+    /* Improve touch targets for better mobile interaction */
+    .btn-get-started, .btn-login, .hero-cta-button, .submit-btn {
+        min-height: 44px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Better mobile navigation */
+    .nav-container {
+        padding: 1rem 1.5rem;
+        position: relative;
+        z-index: 1000;
+    }
+    
+    /* Improve mobile text rendering */
+    body {
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+    
+    /* Better mobile spacing */
+    .hero-content {
+        padding: 0 1rem;
+    }
+    
+    /* Improve mobile form inputs */
+    input, textarea, select {
+        font-size: 16px; /* Prevents zoom on iOS */
+        min-height: 44px;
+    }
+    
+    /* Better mobile button spacing */
+    .nav-buttons {
+        gap: 0.5rem;
+    }
+    
+    /* Improve mobile card layouts */
+    .grey-section-card, .icon-item {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+    
+    .hero-description {
+        font-size: 0.95rem;
+    }
+    
+    .nav-container {
+        padding: 0.8rem 1rem;
+    }
+    
+    .hero {
+        padding: 4rem 1rem 2rem;
     }
 }
