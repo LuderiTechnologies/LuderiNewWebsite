@@ -6,6 +6,7 @@
   "scripts": {
     "start": "serve -p 3000 -s .",
     "dev": "serve -p 3000 -s .",
+    "dev-python": "python3 -m http.server 8000",
     "build": "echo 'Build complete'",
     "serve": "serve -p 3000 -s .",
     "http-server": "npx http-server -p 3000 -o",
