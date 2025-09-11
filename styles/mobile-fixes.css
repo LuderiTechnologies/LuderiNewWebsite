@@ -80,47 +80,72 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* Mobile navigation menu */
-    .nav-menu {
+    /* Mobile navigation menu - reposition existing nav-menu */
+    .nav-center {
         position: fixed;
         left: -100%;
         top: 60px;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.95);
         width: 100%;
-        text-align: center;
-        transition: 0.3s ease-in-out;
-        backdrop-filter: blur(10px);
-        padding: 2rem 0;
-        z-index: 999;
         height: calc(100vh - 60px);
-        overflow-y: auto;
+        background-color: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        transition: 0.3s ease-in-out;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .nav-menu.active {
+    .nav-center.active {
         left: 0;
+    }
+
+    .nav-box {
+        background: transparent;
+        backdrop-filter: none;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0;
+        height: 100%;
+        overflow-y: auto;
+        justify-content: center;
     }
 
     .nav-menu .nav-item {
         margin: 0.5rem 0;
         list-style: none;
+        width: 100%;
     }
 
     .nav-link {
-        color: white;
-        font-size: 1.2rem;
-        padding: 15px 20px;
+        color: white !important;
+        font-size: 1.4rem;
+        padding: 20px 30px;
         display: block;
         text-decoration: none;
         transition: all 0.3s ease;
         border-radius: 8px;
         margin: 0 20px;
+        font-weight: 500;
     }
 
     .nav-link:hover,
     .nav-link.active {
         background-color: rgba(96, 165, 250, 0.2);
-        color: #60a5fa;
+        color: #60a5fa !important;
     }
 
     /* Mobile dropdown menu */
@@ -132,6 +157,9 @@
         margin: 10px 20px;
         padding: 10px 0;
         display: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
     }
 
     .nav-menu .dropdown:hover .dropdown-menu,
@@ -141,8 +169,8 @@
 
     .nav-menu .dropdown-link {
         color: #e2e8f0;
-        font-size: 1rem;
-        padding: 10px 20px;
+        font-size: 1.1rem;
+        padding: 15px 20px;
         display: block;
         text-decoration: none;
         transition: all 0.3s ease;

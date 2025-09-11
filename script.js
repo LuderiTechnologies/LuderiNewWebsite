@@ -1,16 +1,16 @@
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+const navCenter = document.querySelector('.nav-center');
 
-if (hamburger && navMenu) {
+if (hamburger && navCenter) {
     hamburger.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
         hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
+        navCenter.classList.toggle('active');
         
         // Prevent body scroll when menu is open
-        if (navMenu.classList.contains('active')) {
+        if (navCenter.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = '';
@@ -20,16 +20,16 @@ if (hamburger && navMenu) {
     // Close mobile menu when clicking on a link
     document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', (e) => {
         hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+        navCenter.classList.remove('active');
         document.body.style.overflow = '';
         // Don't prevent default - let the link work normally
     }));
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+        if (!hamburger.contains(e.target) && !navCenter.contains(e.target)) {
             hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
+            navCenter.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
@@ -38,7 +38,7 @@ if (hamburger && navMenu) {
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768) {
             hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
+            navCenter.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
