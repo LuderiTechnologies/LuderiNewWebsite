@@ -4357,3 +4357,28 @@ html {
         padding: 4rem 1rem 2rem;
     }
 }
+
+/* Desktop Navigation - Hide Mobile Menu */
+@media (min-width: 769px) {
+    .mobile-nav-menu {
+        display: none !important;
+    }
+    
+    .hamburger {
+        display: none !important;
+    }
+    
+    .nav-center {
+        display: flex !important;
+    }
+    
+    .navbar {
+        background: transparent !important;
+        padding: 15px 0 20px 0 !important;
+    }
+    
+    .nav-container {
+        padding: 0 20px !important;
+        height: 70px !important;
+    }
+}
