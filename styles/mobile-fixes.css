@@ -51,11 +51,11 @@
         display: none !important;
     }
 
-    /* Mobile Hamburger Menu - Top Left */
+    /* Mobile Hamburger Menu - Top Right */
     .hamburger {
         display: flex !important;
         position: fixed !important;
-        left: 15px !important;
+        right: 15px !important;
         top: 15px !important;
         flex-direction: column !important;
         cursor: pointer !important;
