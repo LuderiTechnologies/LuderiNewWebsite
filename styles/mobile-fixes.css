@@ -12,16 +12,32 @@
 
     /* Contact page specific fixes */
     .contact-hero {
-        overflow-x: hidden;
-        width: 100%;
-        max-width: 100vw;
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
     }
 
     .contact-hero .container {
-        max-width: 100%;
-        padding: 0 20px;
-        margin: 0 auto;
-        overflow-x: hidden;
+        max-width: 100% !important;
+        padding: 0 20px !important;
+        margin: 0 auto !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    .contact-form-section {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding: 0 !important;
+    }
+
+    .contact-form-section .container {
+        max-width: 100% !important;
+        padding: 0 20px !important;
+        margin: 0 auto !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
     }
 
     /* Navigation Mobile Fixes */
@@ -463,14 +479,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow-x: hidden;
     }
 
-    .contact-form {
-        gap: 20px;
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 30px 20px;
+    .contact-form-large {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 30px 20px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
     }
 
     .form-row {
@@ -478,14 +496,15 @@
         gap: 20px;
     }
 
-    .form-group input,
-    .form-group textarea {
+    .contact-form-large .form-group input,
+    .contact-form-large .form-group textarea,
+    .contact-form-large .form-group select {
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    .submit-btn {
+    .contact-form-large .submit-btn {
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
