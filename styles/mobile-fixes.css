@@ -46,39 +46,34 @@
         display: none;
     }
     
-    /* Show horizontal navigation bar on mobile instead of hamburger */
+    /* Hide the desktop navigation completely on mobile */
     .nav-center {
-        position: absolute !important;
-        left: 50% !important;
-        top: 50% !important;
-        width: auto !important;
-        height: auto !important;
-        background: transparent !important;
-        z-index: 10 !important;
-        transition: none !important;
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: center !important;
-        align-items: center !important;
-        padding: 0 !important;
-        overflow: visible !important;
-        transform: translate(-50%, -50%) !important;
-    }
-
-    /* Remove close button since we're using horizontal navigation */
-
-    /* Hide hamburger menu since we're using horizontal navigation */
-    .hamburger {
         display: none !important;
     }
 
+    /* Mobile Hamburger Menu - Top Left */
+    .hamburger {
+        display: flex !important;
+        position: fixed !important;
+        left: 15px !important;
+        top: 15px !important;
+        flex-direction: column !important;
+        cursor: pointer !important;
+        z-index: 1001 !important;
+        background: rgba(0, 0, 0, 0.8) !important;
+        padding: 8px !important;
+        border-radius: 6px !important;
+        backdrop-filter: blur(10px) !important;
+    }
+
     .bar {
-        width: 22px;
+        width: 20px;
         height: 2px;
         background: white;
-        margin: 3px 0;
+        margin: 2px 0;
         transition: 0.3s;
         display: block;
+        border-radius: 1px;
     }
 
     /* Hamburger animation */
@@ -87,97 +82,70 @@
     }
 
     .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(6px) rotate(45deg);
     }
 
     .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-6px) rotate(-45deg);
     }
 
-    /* Style the horizontal navigation for mobile */
-    .nav-box {
-        background: rgba(240, 240, 240, 0.9) !important;
-        backdrop-filter: blur(10px) !important;
-        border-radius: 12px !important;
-        padding: 10px 20px !important;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-        width: auto !important;
-        height: auto !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        min-width: 300px !important;
+    /* Mobile Dropdown Menu - Centered from Top */
+    .mobile-nav-menu {
+        position: fixed;
+        top: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 350px;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 16px;
+        padding: 30px 20px;
+        z-index: 1000;
+        transition: top 0.4s ease-in-out;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
 
-    .nav-menu {
-        display: flex !important;
-        flex-direction: row !important;
-        gap: 0.1rem !important;
-        width: 100% !important;
-        max-width: none !important;
-        padding: 0 !important;
-        list-style: none !important;
-        margin: 0 !important;
-        text-align: center !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        flex-wrap: nowrap !important;
-        justify-content: space-between !important;
-        align-items: center !important;
+    .mobile-nav-menu.active {
+        top: 80px;
     }
 
-    .nav-item {
-        display: block !important;
-        width: auto !important;
-        margin: 0 !important;
-        border-bottom: none !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        flex: 1 !important;
-        min-width: 0 !important;
+    .mobile-nav-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
-    .nav-link {
-        display: block !important;
-        color: #333 !important;
-        font-size: 0.75rem !important;
-        font-weight: 500 !important;
-        text-decoration: none !important;
-        padding: 4px 6px !important;
-        text-align: center !important;
-        background: transparent !important;
-        border-radius: 4px !important;
-        transition: all 0.3s ease !important;
-        border: none !important;
-        width: auto !important;
-        position: relative;
-        margin: 0 !important;
-        white-space: nowrap !important;
-        overflow: visible !important;
-        flex: 1 !important;
-        min-width: 0 !important;
+    .mobile-nav-menu li {
+        margin: 0;
     }
 
-    .nav-link:hover {
-        background: rgba(96, 165, 250, 0.1) !important;
-        color: #60a5fa !important;
-        transform: none !important;
+    .mobile-nav-menu a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 16px 20px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .nav-link.active {
-        background: rgba(96, 165, 250, 0.2) !important;
-        color: #60a5fa !important;
+    .mobile-nav-menu a:hover,
+    .mobile-nav-menu a.active {
+        background: rgba(96, 165, 250, 0.3);
+        color: #60a5fa;
+        border-color: rgba(96, 165, 250, 0.5);
+        transform: translateY(-2px);
     }
 
-    /* Remove arrow indicators for horizontal navigation */
-    .nav-link::after {
-        display: none !important;
-    }
-
-    /* Mobile dropdown menu - hide on mobile for simplicity */
-    .dropdown-menu {
-        display: none !important;
-    }
+    /* Remove old horizontal navigation styles - not needed anymore */
 
     /* Hero Section Mobile Fixes */
     .hero {

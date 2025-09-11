@@ -1,24 +1,24 @@
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
-const navCenter = document.querySelector('.nav-center');
+const mobileNavMenu = document.querySelector('.mobile-nav-menu');
 
 console.log('Hamburger element:', hamburger);
-console.log('Nav-center element:', navCenter);
+console.log('Mobile nav menu element:', mobileNavMenu);
 
-if (hamburger && navCenter) {
+if (hamburger && mobileNavMenu) {
     hamburger.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
         console.log('Hamburger clicked!');
         
         hamburger.classList.toggle('active');
-        navCenter.classList.toggle('active');
+        mobileNavMenu.classList.toggle('active');
         
         console.log('Hamburger active:', hamburger.classList.contains('active'));
-        console.log('Nav-center active:', navCenter.classList.contains('active'));
+        console.log('Mobile nav menu active:', mobileNavMenu.classList.contains('active'));
         
         // Prevent body scroll when menu is open
-        if (navCenter.classList.contains('active')) {
+        if (mobileNavMenu.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
             console.log('Menu opened - body scroll disabled');
         } else {
@@ -28,27 +28,18 @@ if (hamburger && navCenter) {
     });
 
     // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', (e) => {
+    document.querySelectorAll('.mobile-nav-menu a').forEach(n => n.addEventListener('click', (e) => {
         hamburger.classList.remove('active');
-        navCenter.classList.remove('active');
+        mobileNavMenu.classList.remove('active');
         document.body.style.overflow = '';
         // Don't prevent default - let the link work normally
     }));
 
-    // Close mobile menu when clicking outside or on close button
+    // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !navCenter.contains(e.target)) {
+        if (!hamburger.contains(e.target) && !mobileNavMenu.contains(e.target)) {
             hamburger.classList.remove('active');
-            navCenter.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-
-    // Close mobile menu when clicking on the close button (X)
-    navCenter.addEventListener('click', (e) => {
-        if (e.target === navCenter || e.target.classList.contains('close-menu')) {
-            hamburger.classList.remove('active');
-            navCenter.classList.remove('active');
+            mobileNavMenu.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
@@ -57,7 +48,7 @@ if (hamburger && navCenter) {
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768) {
             hamburger.classList.remove('active');
-            navCenter.classList.remove('active');
+            mobileNavMenu.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
