@@ -1658,7 +1658,6 @@ html {
     }
     
     .connection-bridge {
-        transform: rotate(90deg);
         min-width: auto;
     }
     
