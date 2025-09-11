@@ -35,9 +35,18 @@ if (hamburger && navCenter) {
         // Don't prevent default - let the link work normally
     }));
 
-    // Close mobile menu when clicking outside
+    // Close mobile menu when clicking outside or on close button
     document.addEventListener('click', (e) => {
         if (!hamburger.contains(e.target) && !navCenter.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navCenter.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close mobile menu when clicking on the close button (X)
+    navCenter.addEventListener('click', (e) => {
+        if (e.target === navCenter || e.target.classList.contains('close-menu')) {
             hamburger.classList.remove('active');
             navCenter.classList.remove('active');
             document.body.style.overflow = '';
