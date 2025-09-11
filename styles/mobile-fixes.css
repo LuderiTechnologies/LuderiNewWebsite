@@ -41,9 +41,13 @@
         margin-left: 12px;
     }
 
-    /* Hide desktop navigation elements */
-    .nav-center,
+    /* Hide desktop navigation elements on mobile */
     .nav-buttons {
+        display: none;
+    }
+    
+    /* Keep nav-center but hide it initially on mobile */
+    .nav-center {
         display: none;
     }
 
@@ -80,7 +84,7 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* Mobile navigation menu - reposition existing nav-menu */
+    /* Mobile navigation menu - reposition existing nav-center */
     .nav-center {
         position: fixed;
         left: -100%;
@@ -98,6 +102,7 @@
 
     .nav-center.active {
         left: 0;
+        display: flex;
     }
 
     .nav-box {
@@ -720,5 +725,192 @@
     .footer-container {
         max-width: 100%;
         overflow-x: hidden;
+    }
+
+    /* About Page Mobile Fixes */
+    .about-hero {
+        padding: 100px 0 60px 0;
+    }
+
+    .about-hero .hero-title {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .about-content {
+        padding: 60px 0 0 0;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .text-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .content-card {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+
+    .card-title {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .image-content {
+        padding-top: 0;
+        align-items: center;
+    }
+
+    .founder-image {
+        width: 100%;
+        max-width: 400px;
+        height: 400px;
+        margin: 0 auto 30px auto;
+    }
+
+    .founder-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .quote-text {
+        margin-top: 20px;
+        margin-left: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .quote-text p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .problem-card {
+        margin-top: 20px;
+        margin-left: 0;
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .erik-image-container {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .erik-image {
+        width: 100%;
+        max-width: 400px;
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .erik-quote {
+        margin-top: 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .erik-quote p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .viktor-image-container {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .viktor-image {
+        width: 100%;
+        max-width: 400px;
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .viktor-quote {
+        margin-top: 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .viktor-quote p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .advisors-section {
+        padding: 80px 0 60px 0;
+    }
+
+    .advisors-title {
+        font-size: 2.5rem !important;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .advisors-grid {
+        grid-template-columns: 1fr !important;
+        gap: 25px;
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+
+    .advisor-card {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .advisor-name {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+
+    .advisor-role {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .advisor-details {
+        text-align: left;
+    }
+
+    .advisor-details li {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+
+    /* Hide decorative circles on mobile */
+    .third-circle {
+        display: none;
+    }
+
+    /* Contact section mobile fixes for About page */
+    .contact-section {
+        padding: 40px 0;
+        margin-top: 40px;
+    }
+
+    .get-in-touch-headline {
+        font-size: 2.2rem !important;
+        margin-bottom: 15px;
+    }
+
+    .contact-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
     }
 }
