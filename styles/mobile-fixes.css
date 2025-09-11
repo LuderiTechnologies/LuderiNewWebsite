@@ -46,9 +46,20 @@
         display: none;
     }
     
-    /* Keep nav-center but hide it initially on mobile */
+    /* Keep nav-center but position it off-screen initially on mobile */
     .nav-center {
-        display: none;
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        transition: 0.3s ease-in-out;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     /* Show hamburger menu */
@@ -84,21 +95,7 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* Mobile navigation menu - reposition existing nav-center */
-    .nav-center {
-        position: fixed;
-        left: -100%;
-        top: 60px;
-        width: 100%;
-        height: calc(100vh - 60px);
-        background-color: rgba(0, 0, 0, 0.95);
-        backdrop-filter: blur(10px);
-        transition: 0.3s ease-in-out;
-        z-index: 999;
-        display: none;
-        align-items: center;
-        justify-content: center;
-    }
+    /* Mobile navigation menu - nav-center is already positioned above */
 
     .nav-center.active {
         left: 0;

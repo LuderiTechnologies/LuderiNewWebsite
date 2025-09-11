@@ -547,27 +547,13 @@ body {
         display: flex;
     }
 
-    .nav-center,
     .nav-buttons {
         display: none;
     }
+    
+    /* Don't hide nav-center on mobile - let mobile-fixes.css handle it */
 
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.8);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        backdrop-filter: blur(10px);
-        padding: 2rem 0;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
+    /* nav-menu styles moved to mobile-fixes.css */
 
     .hero-content {
         max-width: 100%;
