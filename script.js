@@ -417,3 +417,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Desktop Navigation Scroll Effect - Only for desktop (min-width: 769px)
+function handleNavbarScroll() {
+    const navbar = document.querySelector('.navbar');
+    
+    if (navbar && window.innerWidth >= 769) {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', handleNavbarScroll);
+
+// Handle window resize to ensure proper behavior
+window.addEventListener('resize', function() {
+    const navbar = document.querySelector('.navbar');
+    
+    // If window becomes mobile size, remove scrolled class
+    if (window.innerWidth < 769 && navbar) {
+        navbar.classList.remove('scrolled');
+    }
+    
+    // Re-evaluate scroll position on resize
+    handleNavbarScroll();
+});
+
+// Initial check on page load
+document.addEventListener('DOMContentLoaded', handleNavbarScroll);

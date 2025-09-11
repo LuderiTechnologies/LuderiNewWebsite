@@ -26,6 +26,14 @@ body {
     padding: 15px 0 20px 0;
 }
 
+/* Scrolled Navigation Bar - Desktop Only */
+@media (min-width: 769px) {
+    .navbar.scrolled {
+        background: #475569 !important;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
