@@ -50,11 +50,11 @@
     .nav-center {
         position: absolute !important;
         left: 50% !important;
-        top: auto !important;
+        top: 50% !important;
         width: auto !important;
         height: auto !important;
         background: transparent !important;
-        z-index: auto !important;
+        z-index: 10 !important;
         transition: none !important;
         display: flex !important;
         flex-direction: row !important;
@@ -62,7 +62,7 @@
         align-items: center !important;
         padding: 0 !important;
         overflow: visible !important;
-        transform: translateX(-50%) !important;
+        transform: translate(-50%, -50%) !important;
     }
 
     /* Remove close button since we're using horizontal navigation */
@@ -99,20 +99,21 @@
         background: rgba(240, 240, 240, 0.9) !important;
         backdrop-filter: blur(10px) !important;
         border-radius: 12px !important;
-        padding: 8px 16px !important;
+        padding: 10px 20px !important;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
         width: auto !important;
         height: auto !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        min-width: 300px !important;
     }
 
     .nav-menu {
         display: flex !important;
         flex-direction: row !important;
-        gap: 0.25rem !important;
-        width: auto !important;
+        gap: 0.1rem !important;
+        width: 100% !important;
         max-width: none !important;
         padding: 0 !important;
         list-style: none !important;
@@ -120,8 +121,9 @@
         text-align: center !important;
         visibility: visible !important;
         opacity: 1 !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
     }
 
     .nav-item {
@@ -131,18 +133,20 @@
         border-bottom: none !important;
         visibility: visible !important;
         opacity: 1 !important;
+        flex: 1 !important;
+        min-width: 0 !important;
     }
 
     .nav-link {
         display: block !important;
         color: #333 !important;
-        font-size: 0.85rem !important;
+        font-size: 0.75rem !important;
         font-weight: 500 !important;
         text-decoration: none !important;
-        padding: 6px 10px !important;
+        padding: 4px 6px !important;
         text-align: center !important;
         background: transparent !important;
-        border-radius: 6px !important;
+        border-radius: 4px !important;
         transition: all 0.3s ease !important;
         border: none !important;
         width: auto !important;
@@ -150,6 +154,8 @@
         margin: 0 !important;
         white-space: nowrap !important;
         overflow: visible !important;
+        flex: 1 !important;
+        min-width: 0 !important;
     }
 
     .nav-link:hover {
