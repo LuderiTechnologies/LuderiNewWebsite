@@ -48,10 +48,10 @@
     
     /* Show horizontal navigation bar on mobile instead of hamburger */
     .nav-center {
-        position: static !important;
-        left: auto !important;
+        position: absolute !important;
+        left: 50% !important;
         top: auto !important;
-        width: 100% !important;
+        width: auto !important;
         height: auto !important;
         background: transparent !important;
         z-index: auto !important;
@@ -62,7 +62,7 @@
         align-items: center !important;
         padding: 0 !important;
         overflow: visible !important;
-        transform: none !important;
+        transform: translateX(-50%) !important;
     }
 
     /* Remove close button since we're using horizontal navigation */
@@ -111,7 +111,7 @@
     .nav-menu {
         display: flex !important;
         flex-direction: row !important;
-        gap: 0.5rem !important;
+        gap: 0.25rem !important;
         width: auto !important;
         max-width: none !important;
         padding: 0 !important;
@@ -136,10 +136,10 @@
     .nav-link {
         display: block !important;
         color: #333 !important;
-        font-size: 0.9rem !important;
+        font-size: 0.85rem !important;
         font-weight: 500 !important;
         text-decoration: none !important;
-        padding: 8px 12px !important;
+        padding: 6px 10px !important;
         text-align: center !important;
         background: transparent !important;
         border-radius: 6px !important;
