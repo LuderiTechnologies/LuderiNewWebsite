@@ -58,9 +58,9 @@
         transition: top 0.3s ease-in-out;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        padding-top: 80px;
+        padding: 0 20px;
     }
 
     /* Close button for mobile menu */
@@ -133,7 +133,7 @@
         display: flex !important;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         background: transparent;
         padding: 0 20px;
     }
@@ -143,7 +143,7 @@
         flex-direction: column !important;
         gap: 0;
         width: 100%;
-        max-width: 400px;
+        max-width: 280px;
         padding: 0;
         list-style: none;
         margin: 0;
@@ -163,11 +163,11 @@
     .nav-center.active .nav-link {
         display: block !important;
         color: white !important;
-        font-size: 1.3rem !important;
+        font-size: 1.1rem !important;
         font-weight: 400 !important;
         text-decoration: none !important;
-        padding: 20px 0 !important;
-        text-align: left !important;
+        padding: 16px 0 !important;
+        text-align: center !important;
         background: transparent !important;
         border-radius: 0 !important;
         transition: all 0.3s ease !important;
@@ -180,23 +180,22 @@
         background: rgba(96, 165, 250, 0.1) !important;
         color: #60a5fa !important;
         transform: none !important;
-        padding-left: 10px !important;
     }
 
     .nav-center.active .nav-link::after {
         content: '→';
         position: absolute;
-        right: 0;
+        right: 10px;
         top: 50%;
         transform: translateY(-50%);
         color: rgba(255, 255, 255, 0.5);
-        font-size: 1.2rem;
+        font-size: 1rem;
         transition: all 0.3s ease;
     }
 
     .nav-center.active .nav-link:hover::after {
         color: #60a5fa;
-        transform: translateY(-50%) translateX(5px);
+        transform: translateY(-50%) translateX(3px);
     }
 
     /* Mobile dropdown menu */
@@ -213,18 +212,19 @@
 
     .nav-center.active .dropdown-link {
         color: #cbd5e1 !important;
-        font-size: 1.1rem !important;
-        padding: 15px 0 15px 20px !important;
+        font-size: 0.95rem !important;
+        padding: 12px 0 12px 15px !important;
         display: block !important;
         text-decoration: none !important;
         transition: all 0.3s ease !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        text-align: left !important;
     }
 
     .nav-center.active .dropdown-link:hover {
         background: rgba(96, 165, 250, 0.1) !important;
         color: #60a5fa !important;
-        padding-left: 30px !important;
+        padding-left: 20px !important;
     }
 
     /* Hero Section Mobile Fixes */
