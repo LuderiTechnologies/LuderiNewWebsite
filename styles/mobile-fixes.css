@@ -95,14 +95,14 @@
         backdrop-filter: blur(10px);
         transition: 0.3s ease-in-out;
         z-index: 999;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
     }
 
     .nav-center.active {
         left: 0;
-        display: flex;
+        display: flex !important;
     }
 
     .nav-box {
@@ -113,13 +113,15 @@
         box-shadow: none;
         width: 100%;
         height: 100%;
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .nav-menu {
-        flex-direction: column;
+        flex-direction: column !important;
         gap: 0;
         width: 100%;
         text-align: center;
@@ -127,24 +129,32 @@
         height: 100%;
         overflow-y: auto;
         justify-content: center;
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .nav-menu .nav-item {
         margin: 0.5rem 0;
         list-style: none;
         width: 100%;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .nav-link {
         color: white !important;
         font-size: 1.4rem;
         padding: 20px 30px;
-        display: block;
+        display: block !important;
         text-decoration: none;
         transition: all 0.3s ease;
         border-radius: 8px;
         margin: 0 20px;
         font-weight: 500;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .nav-link:hover,
@@ -184,6 +194,33 @@
     .nav-menu .dropdown-link:hover {
         background-color: rgba(96, 165, 250, 0.1);
         color: #60a5fa;
+    }
+
+    /* Additional mobile menu visibility fixes */
+    .nav-center.active .nav-box {
+        display: flex !important;
+    }
+
+    .nav-center.active .nav-menu {
+        display: flex !important;
+    }
+
+    .nav-center.active .nav-item {
+        display: block !important;
+    }
+
+    .nav-center.active .nav-link {
+        display: block !important;
+        color: white !important;
+    }
+
+    /* Ensure dropdown is visible on mobile */
+    .nav-center.active .dropdown-menu {
+        position: static !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
     }
 
     /* Hero Section Mobile Fixes */
