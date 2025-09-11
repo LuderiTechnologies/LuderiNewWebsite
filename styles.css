@@ -4294,7 +4294,7 @@ html {
     }
 }
 
-/* Enhanced Mobile Experience */
+/* Enhanced Mobile Experience - Base improvements */
 @media (max-width: 768px) {
     /* Improve touch targets for better mobile interaction */
     .btn-get-started, .btn-login, .hero-cta-button, .submit-btn {
@@ -4337,6 +4337,18 @@ html {
     .grey-section-card, .icon-item {
         padding: 1.5rem;
         margin-bottom: 1rem;
+    }
+    
+    /* Ensure no horizontal overflow */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Fix any potential layout issues */
+    .container {
+        max-width: 100%;
+        overflow-x: hidden;
     }
 }
 
