@@ -212,6 +212,15 @@
     .nav-center.active .nav-link {
         display: block !important;
         color: white !important;
+        font-size: 1.4rem !important;
+        padding: 20px 30px !important;
+        margin: 0 20px !important;
+        text-align: center !important;
+        background: transparent !important;
+        border: none !important;
+        width: auto !important;
+        height: auto !important;
+        line-height: normal !important;
     }
 
     /* Ensure dropdown is visible on mobile */
@@ -221,6 +230,40 @@
         opacity: 1 !important;
         visibility: visible !important;
         transform: none !important;
+    }
+
+    /* Force visibility of all navigation elements */
+    .nav-center.active * {
+        color: white !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .nav-center.active .nav-link::after {
+        display: none !important;
+    }
+
+    /* Debug: Force all text to be visible in mobile menu */
+    .nav-center.active {
+        background-color: rgba(0, 0, 0, 0.95) !important;
+    }
+
+    .nav-center.active .nav-menu li a {
+        color: white !important;
+        font-size: 1.4rem !important;
+        font-weight: 500 !important;
+        text-decoration: none !important;
+        display: block !important;
+        padding: 20px !important;
+        margin: 10px 0 !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-radius: 8px !important;
+        text-align: center !important;
+    }
+
+    .nav-center.active .nav-menu li a:hover {
+        background: rgba(96, 165, 250, 0.3) !important;
+        color: #60a5fa !important;
     }
 
     /* Hero Section Mobile Fixes */
@@ -550,6 +593,9 @@
     /* Revolution Section Mobile */
     .revolution-section {
         padding: 60px 0;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
     }
 
     .revolution-container {
@@ -559,10 +605,12 @@
     .revolution-title {
         font-size: 2.5rem !important;
         margin-bottom: 15px;
+        color: #1e293b !important;
     }
 
     .revolution-subtitle {
         font-size: 1.1rem;
+        color: #64748b !important;
     }
 
     .revolution-content {
