@@ -54,6 +54,8 @@
         right: 15px;
         top: 50%;
         transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 1001;
     }
 
     .bar {
@@ -62,6 +64,20 @@
         background: white;
         margin: 3px 0;
         transition: 0.3s;
+        display: block;
+    }
+
+    /* Hamburger animation */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     /* Mobile navigation menu */
@@ -73,10 +89,12 @@
         background-color: rgba(0, 0, 0, 0.95);
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: 0.3s ease-in-out;
         backdrop-filter: blur(10px);
         padding: 2rem 0;
         z-index: 999;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
     }
 
     .nav-menu.active {
@@ -84,13 +102,55 @@
     }
 
     .nav-menu .nav-item {
-        margin: 1rem 0;
+        margin: 0.5rem 0;
+        list-style: none;
     }
 
     .nav-link {
         color: white;
         font-size: 1.2rem;
-        padding: 15px 0;
+        padding: 15px 20px;
+        display: block;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        margin: 0 20px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: rgba(96, 165, 250, 0.2);
+        color: #60a5fa;
+    }
+
+    /* Mobile dropdown menu */
+    .nav-menu .dropdown-menu {
+        position: static;
+        background: rgba(0, 0, 0, 0.3);
+        box-shadow: none;
+        border-radius: 8px;
+        margin: 10px 20px;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .nav-menu .dropdown:hover .dropdown-menu,
+    .nav-menu .dropdown-menu:hover {
+        display: block;
+    }
+
+    .nav-menu .dropdown-link {
+        color: #e2e8f0;
+        font-size: 1rem;
+        padding: 10px 20px;
+        display: block;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu .dropdown-link:hover {
+        background-color: rgba(96, 165, 250, 0.1);
+        color: #60a5fa;
     }
 
     /* Hero Section Mobile Fixes */
