@@ -2,18 +2,28 @@
 const hamburger = document.querySelector('.hamburger');
 const navCenter = document.querySelector('.nav-center');
 
+console.log('Hamburger element:', hamburger);
+console.log('Nav-center element:', navCenter);
+
 if (hamburger && navCenter) {
     hamburger.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
+        console.log('Hamburger clicked!');
+        
         hamburger.classList.toggle('active');
         navCenter.classList.toggle('active');
+        
+        console.log('Hamburger active:', hamburger.classList.contains('active'));
+        console.log('Nav-center active:', navCenter.classList.contains('active'));
         
         // Prevent body scroll when menu is open
         if (navCenter.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
+            console.log('Menu opened - body scroll disabled');
         } else {
             document.body.style.overflow = '';
+            console.log('Menu closed - body scroll enabled');
         }
     });
 
