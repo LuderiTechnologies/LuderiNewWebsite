@@ -231,6 +231,7 @@ function toggleSection(sectionNumber) {
     const content = document.getElementById(`content-${sectionNumber}`);
     const header = content.previousElementSibling;
     const icon = header.querySelector('.toggle-icon');
+    const infoBox = document.querySelector('.info-box');
     
     // Close all other sections first
     const allContents = document.querySelectorAll('.expandable-content');
@@ -253,6 +254,17 @@ function toggleSection(sectionNumber) {
     } else {
         icon.textContent = '+';
         icon.style.transform = 'rotate(0deg)';
+    }
+    
+    // Desktop only - Expand info box when any content is shown
+    if (window.innerWidth >= 769 && infoBox) {
+        const hasActiveContent = Array.from(allContents).some(content => content.classList.contains('active'));
+        
+        if (hasActiveContent) {
+            infoBox.classList.add('expanded');
+        } else {
+            infoBox.classList.remove('expanded');
+        }
     }
 }
 
