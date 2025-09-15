@@ -903,6 +903,31 @@
         max-width: 100%;
     }
 
+    .adam-image-container {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .adam-image {
+        width: 100% !important;
+        max-width: 300px !important;
+        height: 300px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        margin: 0 auto;
+    }
+
+    .adam-quote {
+        margin-top: 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .adam-quote p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
     .viktor-quote p {
         font-size: 1.1rem;
         line-height: 1.6;
