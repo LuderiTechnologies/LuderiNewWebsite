@@ -207,6 +207,17 @@
 
     /* Remove old horizontal navigation styles - not needed anymore */
 
+    /* Desktop Override - Hide Mobile Menu */
+    @media (min-width: 769px) {
+        .mobile-nav-menu {
+            display: none !important;
+        }
+        
+        .hamburger {
+            display: none !important;
+        }
+    }
+
     /* Hero Section Mobile Fixes */
     .hero {
         min-height: 100vh;
